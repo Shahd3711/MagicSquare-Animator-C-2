@@ -51,9 +51,9 @@ void initializeMagicSquare(int n)
             cout<<Colors::MAGENTA<<"+---"<<Colors::RESET;
         }
         cout<<Colors::MAGENTA<<"+"<<Colors::RESET<<el;
-        for(int j = 0; j < n; j++) 
+        for(int j=0; j<n; j++) 
         {
-            cout<<Colors::MAGENTA<<"|   "<< Colors::RESET;
+            cout<<Colors::MAGENTA<<"|   "<<Colors::RESET;
         }
         cout<<Colors::MAGENTA<<"|"<<Colors::RESET<<el;
     }
