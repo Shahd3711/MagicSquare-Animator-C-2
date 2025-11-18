@@ -17,7 +17,7 @@ void delay(int milliseconds)
 #ifdef _WIN32
     Sleep(milliseconds);
 #else
-    usleep(milliseconds * 1000);
+    usleep(milliseconds*1000);
 #endif
 }
 
@@ -32,36 +32,36 @@ void clearScreen()
 
 namespace Colors 
 {
-    const string RESET = "\033[0m";
-    const string MAGENTA = "\033[95m";
-    const string LIGHT_MAGENTA = "\033[35;1m";
-    const string WHITE_ON_MAGENTA = "\033[97;105m";
-    const string BOLD = "\033[1m";
+    const string RESET="\033[0m";
+    const string MAGENTA="\033[95m";
+    const string LIGHT_MAGENTA="\033[35;1m";
+    const string WHITE_ON_MAGENTA="\033[97;105m";
+    const string BOLD="\033[1m";
 }
 
 void initializeMagicSquare(int n) 
 {
     clearScreen();
-
-    cout << Colors::MAGENTA << Colors::BOLD;
-    cout << "=== " << n << "x" << n << " MAGIC SQUARE ===" << Colors::RESET << el << el;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << Colors::MAGENTA << "+---" << Colors::RESET;
+    cout<<Colors::MAGENTA<<Colors::BOLD;
+    cout<<"=== "<<n<<"x"<<n<<" MAGIC SQUARE ==="<<Colors::RESET<<el<<el;
+    for(int i=0; i<n; i++) 
+    {
+        for(int j=0; j<n; j++) 
+        {
+            cout<<Colors::MAGENTA<<"+---"<<Colors::RESET;
         }
-        cout << Colors::MAGENTA << "+" << Colors::RESET << el;
-
-        for (int j = 0; j < n; j++) {
-            cout << Colors::MAGENTA << "|   " << Colors::RESET;
+        cout<<Colors::MAGENTA<<"+"<<Colors::RESET<<el;
+        for(int j = 0; j < n; j++) 
+        {
+            cout<<Colors::MAGENTA<<"|   "<< Colors::RESET;
         }
-        cout << Colors::MAGENTA << "|" << Colors::RESET << el;
+        cout<<Colors::MAGENTA<<"|"<<Colors::RESET<<el;
     }
-
-    for (int j = 0; j < n; j++) {
-        cout << Colors::MAGENTA << "+---" << Colors::RESET;
+    for(int j=0; j<n; j++) 
+    {
+        cout<<Colors::MAGENTA<<"+---"<<Colors::RESET;
     }
-    cout << Colors::MAGENTA << "+" << Colors::RESET << el << el;
+    cout<<Colors::MAGENTA<<"+"<<Colors::RESET<<el<<el;
 }
 
 void generateMagicSquareWithDelay(int n) 
